@@ -16,11 +16,12 @@ using namespace std;
 class Employee {
 public:
 	Employee(string empName, string empJob, double empWage);
+
 	string getName();
 	string getJob();
 	double getWage();
 	void setName(string empName);
-	void setJob(double empJob);
+	void setJob(string empJob);
 	void setWage(double empWage);
 
 private:
