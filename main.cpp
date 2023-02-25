@@ -25,11 +25,11 @@ int main()
 	while (running)
 	{
 		cout << endl;
-		cout << "Please select an option:" << endl;
 		cout << "1. Print list of employees." << endl;
 		cout << "2. Calculate total wages." << endl;
 		cout << "3. Add new employee." << endl;
 		cout << "4. Exit application." << endl;
+		cout << "Please select an option: ";
 
 		int choice;
 		cin >> choice;
