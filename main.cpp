@@ -75,6 +75,10 @@ int main()
 
 	}
 
+	string temp;
+	cout << "Enter any value to exit program (this is a placeholder to see program output): ";
+	cin >> temp;
+
 	return 0;
 }
 
