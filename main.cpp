@@ -34,6 +34,14 @@ int main()
 		int choice;
 		cin >> choice;
 
+		while (cin.fail())
+		{
+			cout << "Invalid input. Please enter a valid, non-negative, number: ";
+			cin.clear();
+			cin.ignore(256, '\n');
+			cin >> choice;
+		}
+
 		switch (choice)
 		{
 		case 1:
@@ -91,12 +99,13 @@ void addEmployee(vector<Employee>& employeeList)
 	cout << endl;
 	
 	cout << "Enter name of new employee: ";
-	cin >> name;
+	cin.ignore();
+	getline(cin, name);
 
 	cout << "Enter position of new employee: ";
-	cin >> jobTitle;
+	getline(cin, jobTitle);
 
-	cout << "Enter wage of new employee: ";
+	cout << "Enter houlry wage of new employee: $";
 	cin >> wage;
 
 	while (cin.fail() || wage < 0)
@@ -138,5 +147,5 @@ void calculateTotalWages(vector<Employee>& employeeList)
 		}
 		totalWages += hours * employeeList[i].getWage();
 	}
-	cout << endl << "Total wages: " << totalWages << endl;
+	cout << endl << "Total wages: $" << totalWages << endl;
 }
